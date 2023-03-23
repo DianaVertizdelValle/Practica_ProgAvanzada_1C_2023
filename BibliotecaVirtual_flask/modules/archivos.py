@@ -1,6 +1,12 @@
 # -*- coding: utf-8 -*-
 
 def cargar_lista_desde_archivo(nombre_archivo, lista_libros):
+    """Función para ....
+
+    Args:
+        nombre_archivo (str): _description_
+        lista_libros (list): _description_
+    """
     with open(nombre_archivo, "r") as archi:
         for linea in archi:
             lista_libro = linea.rstrip().split(',')

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca Virtual</title>
+</head>
+<body>
+    <img src="static/images/libros.png" alt="">
+    <h1>Mi Biblioteca Virtual</h1>
+    {%if esta_vacia:%}
+        <h3>La Biblioteca está vacía</h3>
+    {% else: %}
+        {% for libro in lista_libros: %}
+        <li>
+           {{libro.nombre}} - {{libro.autor}} - {{libro.puntaje}}/10 
+        </li>
+        {% endfor %}
+        <br>
+    {% endif %}
+    <form action="/add">        
+        <input type="submit" value="Agregar libros">
+      </form>
+</body>
+</html>
