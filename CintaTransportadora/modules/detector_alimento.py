@@ -7,7 +7,7 @@ class DetectorAlimento:
     para detectar el tipo de alimento y su peso.
     """
     def __init__(self):
-        self.alimentos = ["kiwi", "manzana", "papa", "zanahoria"]
+        self.alimentos = ["kiwi", "manzana", "papa", "zanahoria", "undefined"]
         self.peso_alimentos = np.round(np.linspace(0.05, 0.6, 12),2)
         self.prob_pesos = np.round(self.__softmax(self.peso_alimentos)[::-1], 2)
 
