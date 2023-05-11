@@ -15,6 +15,7 @@ class TestConversorUnidadesTemperatura(unittest.TestCase):
     def test_convertir_a_kelvin(self):
         """ pruebo valores de temperatura para convertir a unidades Kelvin"""
         # Pruebo valores de temperatura de conversión válidos
+        #self.assertEqual(self.miConversor.convertir_a_kelvin(0, 'F'), 255.37)
         self.assertAlmostEqual( self.miConversor.convertir_a_kelvin(0, 'C'), 273.15, places=2 )
         self.assertAlmostEqual( self.miConversor.convertir_a_kelvin(-273.15, 'C'), 0, places=2 )
         self.assertAlmostEqual( self.miConversor.convertir_a_kelvin(0, 'F'), 255.37, places=2)
