@@ -7,7 +7,7 @@ def cargar_lista_desde_archivo(nombre_archivo, lista_libros):
         nombre_archivo (str): _description_
         lista_libros (list): _description_
     """
-    with open(nombre_archivo, "r", encoding='utf-8') as archi:
+    with open(nombre_archivo, "r") as archi:
         for linea in archi:
             lista_libro = linea.rstrip().split(',')
             libro = {
@@ -27,5 +27,5 @@ def guardar_lista_en_archivo(nombre_archivo, lista_libros):
 
 def guardar_libro_en_archivo(nombre_archivo, libro):
     
-    with open(nombre_archivo, "a", encoding="utf-8") as archi:
+    with open(nombre_archivo, "a") as archi:
         archi.write(f"{libro['nombre']},{libro['autor']},{libro['puntaje']}\n")

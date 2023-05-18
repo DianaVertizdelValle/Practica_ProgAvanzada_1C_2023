@@ -12,11 +12,11 @@
         <form class="mx-1 mt-1 mb-3" action="{{ url_for('edit') }}" method="post">
             <input type="hidden" name="id" value="{{libro.id}}">
             <label for="nombre">Título del libro:</label><br>
-            <input type="text" id="nombre" name="titulo" value="{{libro.to_dict().nombre}}" ><br>
+            <input type="text" id="nombre" name="titulo" value="{{libro.nombre}}" ><br>
             <label for="autor">Autor del libro:</label><br>
-            <input type="text" id="autor" name="autor" value="{{libro.to_dict().autor}}"><br>
+            <input type="text" id="autor" name="autor" value="{{libro.autor}}"><br>
             <label for="puntaje">Puntuación:</label><br>
-            <input type="text" id="puntaje" name="puntaje" value="{{libro.to_dict().puntaje}}"><br><br>
+            <input type="text" id="puntaje" name="puntaje" value="{{libro.puntaje}}"><br><br>
             <input type="submit" value="Editar">
         </form>
     </div>

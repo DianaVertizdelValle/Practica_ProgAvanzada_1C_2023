@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_bootstrap import Bootstrap # https://pythonhosted.org/Flask-Bootstrap/basic-usage.html
+from flask_bootstrap import Bootstrap #1) https://pythonhosted.org/Flask-Bootstrap/basic-usage.html
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 
@@ -10,3 +10,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 Bootstrap(app)
 db = SQLAlchemy(app)
+
+login_manager = LoginManager()
+login_manager.init_app(app)

@@ -1,16 +1,12 @@
 from flask import Flask
-from flask_bootstrap import Bootstrap
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
 
 app = Flask("server")
 
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+#indicar la ubicación de la base de datos
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///books.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-Bootstrap(app)
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+#La instancia de la clase SQLAlchemy permite que la aplicación interactúe con la base de datos
 db = SQLAlchemy(app)
 
-login_manager = LoginManager()
-login_manager.init_app(app)
